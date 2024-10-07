@@ -1,0 +1,4 @@
+.env
+.idea
+input/*
+.DS_Store
