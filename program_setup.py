@@ -18,6 +18,12 @@ def process_args():
                         dest='input_file',
                         help="Specify an input file.")
 
+    parser.add_argument("--clear-previous",
+                        dest="clear_previous",
+                        action='store_true',
+                        default=False,
+                        help="Add this tag to clear the previous labels (etc)")
+
     return parser.parse_args()
 
 

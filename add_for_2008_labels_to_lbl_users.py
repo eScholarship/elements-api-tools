@@ -54,11 +54,9 @@ def get_user_for_codes(reporting_db_conn):
 
 # See below of example XML.
 def create_body_xml(labels_list):
-    xml_update_object = ET.Element(
-        "update-object", attrib={'xmlns': 'http://www.symplectic.co.uk/publications/api'})
+    xml_update_object = ET.Element("update-object", attrib={'xmlns': 'http://www.symplectic.co.uk/publications/api'})
     xml_fields = ET.SubElement(xml_update_object, 'fields')
-    xml_field = ET.SubElement(
-        xml_fields, 'field', attrib={'name': 'labels', 'operation': 'add'})
+    xml_field = ET.SubElement(xml_fields, 'field', attrib={'name': 'labels', 'operation': 'add'})
     xml_keywords = ET.SubElement(xml_field, 'keywords')
 
     # Add a sub-element for each label
